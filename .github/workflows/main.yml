@@ -22,7 +22,7 @@ jobs:
           ssh-keyscan 34.125.171.228 >> /home/runner/.ssh/known_hosts
           cat '/home/runner/.ssh/known_hosts'
           echo "end of ssh key setup"
-          
+           
       - name: Connect to EC2 and Run Commands
         run: |
           ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.125.171.228
