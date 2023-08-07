@@ -31,4 +31,4 @@ jobs:
           
       - name: Connect to EC2 and Copy Files
         run: |
-          ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.16.161.239 "mkdir -p /var/www/html/ && cd /var/www/html/ && git init && git clone https://github.com/bpavithra18/DevOps_GitActions.git && cd DevOps_GitActions"
+          ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.16.161.239 "mkdir -p /var/www/html/ && cd /var/www/html/ && chmod 640 html && rm -rf * && git init && git clone https://github.com/bpavithra18/DevOps_GitActions.git && cd DevOps_GitActions"
