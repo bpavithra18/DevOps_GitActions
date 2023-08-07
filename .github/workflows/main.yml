@@ -19,14 +19,14 @@ jobs:
           whoami
           echo "${{ secrets.GCP_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa    
-          ssh-keyscan 34.125.171.228 >> /home/runner/.ssh/known_hosts
+          ssh-keyscan 34.16.161.239 >> /home/runner/.ssh/known_hosts
           cat '/home/runner/.ssh/known_hosts'
           echo "end of ssh key setup"
            
       - name: Connect to EC2 and Run Commands
         run: |
-          ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.125.171.228
+          ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.16.161.239
            echo "connection made"
       #- name: Connect to EC2 and Copy Files
         #run: |
-          #ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.125.171.228 "mkdir -p /var/www/html/ && cd /var/www/html/ && rm -rf * && git init && git clone https://github.com/bpavithra18/DevOps_GitActions.git && cd DevOps_GitActions"
+          #ssh -vvv -o StrictHostKeyChecking=no pavitrabolla123@34.16.161.239 "mkdir -p /var/www/html/ && cd /var/www/html/ && rm -rf * && git init && git clone https://github.com/bpavithra18/DevOps_GitActions.git && cd DevOps_GitActions"
